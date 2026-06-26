@@ -1,6 +1,6 @@
 # 📚 Katalog Buku
 
-**Posisi yang dilamar: Fullstack**
+**Posisi yang dilamar: Frontend**
 
 Aplikasi web manajemen katalog buku berbasis Laravel. Pengguna dapat mengelola data buku dengan fitur tambah, lihat, ubah, dan hapus (CRUD), dilengkapi pencarian, filter kategori, dan pengurutan data.
 
