@@ -102,32 +102,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Delete Account -->
-        <div class="col-12">
-            <div class="card border-0 shadow-sm border-danger">
-                <div class="card-body p-4">
-                    <h5 class="fw-bold mb-1 text-danger">Hapus Akun</h5>
-                    <p class="text-muted small mb-4">Setelah akun dihapus, semua data akan hilang permanen.</p>
-
-                    <form method="POST" action="{{ route('profile.destroy') }}"
-                          onsubmit="return confirm('Yakin ingin menghapus akun? Tindakan ini tidak dapat dibatalkan.')">
-                        @csrf
-                        @method('DELETE')
-
-                        <div class="mb-3">
-                            <label for="delete_password" class="form-label">Masukkan Password untuk Konfirmasi</label>
-                            <input type="password" id="delete_password" name="password"
-                                   class="form-control @error('password', 'userDeletion') is-invalid @enderror"
-                                   placeholder="Password kamu saat ini">
-                            @error('password', 'userDeletion')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
-                        </div>
-
-                        <button type="submit" class="btn btn-danger">
-                            <i class="bi bi-trash me-1"></i>Hapus Akun
-                        </button>
                     </form>
                 </div>
             </div>
