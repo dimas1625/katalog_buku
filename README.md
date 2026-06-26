@@ -1,6 +1,6 @@
 # 📚 Katalog Buku
 
-**Posisi yang dilamar: Frontend**
+**Posisi yang dilamar: Fullstack**
 
 Aplikasi web manajemen katalog buku berbasis Laravel. Pengguna dapat mengelola data buku dengan fitur tambah, lihat, ubah, dan hapus (CRUD), dilengkapi pencarian, filter kategori, dan pengurutan data.
 
@@ -20,7 +20,7 @@ Aplikasi web manajemen katalog buku berbasis Laravel. Pengguna dapat mengelola d
 
 ---
 
-## Fitur
+## ✅ Fitur
 
 ### Wajib
 - CRUD lengkap: tambah, tampilkan daftar, ubah, dan hapus buku
@@ -107,6 +107,19 @@ php artisan serve
 ### Akun default (setelah seeder)
 - **Email:** `test@example.com`
 - **Password:** `password`
+
+---
+
+## 📸 Tangkapan Layar
+
+### Halaman Dashboard
+![Dashboard](screenshot/dashboard.png)
+
+### Halaman Daftar Buku
+![Daftar Buku](screenshot/daftarbuku.png)
+
+### Halaman Login
+![Login](screenshot/login.png)
 
 ---
 
