@@ -1,58 +1,147 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 📚 Katalog Buku
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Posisi yang dilamar: Frontend**
 
-## About Laravel
+Aplikasi web manajemen katalog buku berbasis Laravel. Pengguna dapat mengelola data buku dengan fitur tambah, lihat, ubah, dan hapus (CRUD), dilengkapi pencarian, filter kategori, dan pengurutan data.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🛠️ Tech Stack
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+| Komponen | Teknologi | Versi |
+|---|---|---|
+| Framework Backend | Laravel | 13.x |
+| Bahasa | PHP | 8.3 |
+| Database | MySQL | 8.0 |
+| Frontend | Bootstrap | 5.3.3 |
+| Icons | Bootstrap Icons | 1.11.3 |
+| Auth | Laravel Breeze | 2.x |
+| Runtime JS | Node.js | 20.x |
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Fitur
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Wajib
+- CRUD lengkap: tambah, tampilkan daftar, ubah, dan hapus buku
+- Setiap buku memiliki kolom: judul, penulis, kategori, tahun terbit, stok, deskripsi
+- Validasi input di sisi server (FormRequest)
+- Filter berdasarkan kategori dan pengurutan berdasarkan kolom (judul, penulis, tahun, stok)
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+### Nilai Tambah
+- ✅ Login dan registrasi pengguna (Laravel Breeze)
+- ✅ Pencarian berdasarkan judul atau nama penulis
+- ✅ Endpoint JSON: `GET /api/books`
+- ✅ Tampilan responsif (Bootstrap 5)
+- ✅ Relasi antar tabel: `books` → `categories`
 
-## Agentic Development
+---
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## ⚙️ Instalasi
 
+### 1. Clone repository
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/username/katalog_buku.git
+cd katalog_buku
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 2. Install dependencies PHP
+```bash
+composer install
+```
 
-## Contributing
+### 3. Install dependencies Node.js
+```bash
+npm install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 4. Salin file environment
+```bash
+cp .env.example .env
+```
 
-## Code of Conduct
+### 5. Generate application key
+```bash
+php artisan key:generate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 6. Konfigurasi database
 
-## Security Vulnerabilities
+Buka file `.env` dan sesuaikan:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=katalog_buku
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 7. Jalankan migration dan seeder
+```bash
+php artisan migrate --seed
+```
 
-## License
+### 8. Build assets
+```bash
+npm run build
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 9. Jalankan server
+```bash
+php artisan serve
+```
+
+---
+
+## 🌐 Akses Aplikasi
+
+| URL | Keterangan |
+|---|---|
+| `http://localhost:8000` | Halaman utama (redirect ke daftar buku) |
+| `http://localhost:8000/books` | Daftar buku |
+| `http://localhost:8000/login` | Halaman login |
+| `http://localhost:8000/register` | Halaman registrasi |
+| `http://localhost:8000/api/books` | Endpoint JSON daftar buku |
+
+### Akun default (setelah seeder)
+- **Email:** `test@example.com`
+- **Password:** `password`
+
+---
+
+## 📸 Tangkapan Layar
+
+### Halaman Daftar Buku
+![Daftar Buku](screenshots/books-index.png)
+
+### Halaman Tambah Buku
+![Tambah Buku](screenshots/books-create.png)
+
+---
+
+## 🗃️ Struktur Database
+
+### Tabel `categories`
+| Kolom | Tipe | Keterangan |
+|---|---|---|
+| id | bigint | Primary key |
+| name | varchar | Nama kategori |
+| slug | varchar | Slug unik kategori |
+
+### Tabel `books`
+| Kolom | Tipe | Keterangan |
+|---|---|---|
+| id | bigint | Primary key |
+| category_id | bigint | Foreign key ke categories |
+| title | varchar | Judul buku |
+| author | varchar | Nama penulis |
+| year | integer | Tahun terbit |
+| stock | integer | Jumlah stok |
+| description | text | Deskripsi buku (opsional) |
+
+---
+
+## 📝 Catatan
+
+Seluruh fitur wajib telah selesai dikerjakan. Fitur foto profil tidak diimplementasikan karena memerlukan konfigurasi storage tambahan dan dianggap tidak krusial untuk kebutuhan aplikasi ini.
