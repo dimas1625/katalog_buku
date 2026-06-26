@@ -10,13 +10,13 @@ Aplikasi web manajemen katalog buku berbasis Laravel. Pengguna dapat mengelola d
 
 | Komponen | Teknologi | Versi |
 |---|---|---|
-| Framework Backend | Laravel | 13.x |
-| Bahasa | PHP | 8.3 |
+| Framework Backend | Laravel | 13.17.0 |
+| Bahasa | PHP | 8.3.30 |
 | Database | MySQL | 8.0 |
 | Frontend | Bootstrap | 5.3.3 |
 | Icons | Bootstrap Icons | 1.11.3 |
-| Auth | Laravel Breeze | 2.x |
-| Runtime JS | Node.js | 20.x |
+| Auth | Laravel Breeze | 2.4.2 |
+| Runtime JS | Node.js | 24.18.0 |
 
 ---
 
@@ -107,16 +107,6 @@ php artisan serve
 ### Akun default (setelah seeder)
 - **Email:** `test@example.com`
 - **Password:** `password`
-
----
-
-## 📸 Tangkapan Layar
-
-### Halaman Daftar Buku
-![Daftar Buku](screenshots/books-index.png)
-
-### Halaman Tambah Buku
-![Tambah Buku](screenshots/books-create.png)
 
 ---
 
