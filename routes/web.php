@@ -20,4 +20,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('books', BookController::class);
 });
 
+Route::get('/api/books', function () {
+    return response()->json(
+        \App\Models\Book::with('category')->get()
+    );
+})->middleware('auth');
+
 require __DIR__.'/auth.php';
